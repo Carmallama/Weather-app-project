@@ -30,7 +30,6 @@
         <hr />
         <h1>
           <span class="current-city"> Reading </span>
-          <span class="current-temperature"> 17°C </span>
         </h1>
         <h2>
           <span class="current-date"> Friday 10th June </span>
@@ -42,6 +41,7 @@
             <small> ☀️ </small>
           </div>
           <div class="col-md">
+            <h4 id="current-temperature">17°C</h4>
             <ul>
               <li class="min-temp">L:<span id="low">7</span>°C</li>
               <li class="max-temp">
@@ -50,7 +50,11 @@
             </ul>
           </div>
           <div class="col-md">
+            <div>Weather overview |</div>
             <ul class="humidity-wind">
+              <li class="feels-like">
+                Feels like: <span id="feels-like-temp">17°C</span>
+              </li>
               <li class="humidity">
                 Humidity: <span id="humidity-value">68%</span>
               </li>
