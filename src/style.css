@@ -1,10 +1,15 @@
 h1 {
   text-align: center;
+  font-weight: bold;
 }
 h2 {
   text-align: center;
   font-size: 18px;
   color: #873ff2;
+  font-weight: bold;
+}
+h3 {
+  font-size: 25px;
 }
 
 input {
@@ -15,6 +20,9 @@ button {
   color: #f1f1f1;
   border: none;
   border-radius: 4px;
+}
+img {
+  max-width: 150px;
 }
 hr {
   position: relative;
@@ -38,6 +46,7 @@ footer {
 .container {
   max-width: 700px;
   margin: 40px auto;
+  font-family: "Cerebri Sans", Helvetica, Arial, sans-serif;
 }
 .app-wrapper {
   padding: 30px;
@@ -48,15 +57,23 @@ footer {
   color: #272044;
 }
 .current {
-  margin: 0px;
+  margin-top: 5px;
   padding: 10px;
   border-radius: 50px;
 }
 .col-md {
   text-align: center;
 }
+.temperatures {
+  margin-top: 10px;
+}
+
+.weather-overview {
+  margin-top: 30px;
+}
+
 .current {
-  background-color: #f1f1f1;
+  background-color: #f9f7fc;
 }
 .submit {
   background-color: #8f73f2;
@@ -77,7 +94,34 @@ footer {
   position: relative;
   top: -36px;
 }
+.weather-overview {
+  text-align: left;
+}
 
+.feels-like:hover {
+  background-color: #8f73f2;
+  color: #f1f1f1;
+  border: none;
+  border-radius: 4px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+.humidity:hover {
+  background-color: #8f73f2;
+  color: #f1f1f1;
+  border: none;
+  border-radius: 4px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+.wind-speed:hover {
+  background-color: #8f73f2;
+  color: #f1f1f1;
+  border: none;
+  border-radius: 4px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
 #current-temperature {
   font-size: 70px;
   line-height: 1;
