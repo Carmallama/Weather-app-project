@@ -46,6 +46,9 @@ footer {
 a {
   color: #873ff2;
 }
+a:hover {
+  color: #492580;
+}
 .container {
   max-width: 700px;
   margin: 40px auto;
@@ -91,12 +94,12 @@ a {
   background: #873ff2;
   color: white;
 }
-
 .units {
   font-size: 18px;
   position: relative;
   top: -36px;
 }
+
 .weather-overview {
   text-align: left;
 }
