@@ -66,6 +66,7 @@ a:hover {
   margin-top: 5px;
   padding: 10px;
   border-radius: 50px;
+  background-color: #f9f7fc;
 }
 .col-md {
   text-align: center;
@@ -78,9 +79,6 @@ a:hover {
   margin-top: 30px;
 }
 
-.current {
-  background-color: #f9f7fc;
-}
 .submit {
   background-color: #8f73f2;
   color: #f1f1f1;
@@ -128,12 +126,12 @@ a:hover {
   opacity: 0.6;
   transition: 0.3s;
 }
-#current-temperature {
+#currentTemperature {
   font-size: 70px;
   line-height: 1;
 }
 
-#current-location-button {
+#currentLocationButton {
   background-color: #8f73f2;
   color: #f1f1f1;
   border: none;
@@ -142,7 +140,7 @@ a:hover {
   opacity: 0.6;
   transition: 0.3s;
 }
-#current-location-button:hover {
+#currentLocationButton:hover {
   background: #873ff2;
   color: white;
 }

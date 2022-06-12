@@ -12,8 +12,9 @@
       crossorigin="anonymous"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <title>Weather by Carm</title>
+
     <link href="src/style.css" rel="stylesheet" type="text/css" />
+    <title>Weather by Carm</title>
   </head>
   <body>
     <div class="container">
@@ -27,12 +28,12 @@
               id="search-city"
             />
             <input type="submit" class="submit" value="Search" />
-            <button id="current-location-button">📍</button>
+            <button id="currentLocationButton">📍</button>
           </form>
         </div>
 
         <hr />
-        <h1>Reading</h1>
+        <h1 id="city">Reading</h1>
         <h2>
           <span id="currentDate"> Friday 10th June 20:10</span>
         </h2>
@@ -43,13 +44,13 @@
             />
           </div>
           <div class="col-md temperatures">
-            <span id="current-temperature">17</span>
+            <span id="currentTemperature">17</span>
             <span class="units">
               <a href="#" id="celcius-link">°C</a>
               |
               <a href="#" id="fahrenheit-link">°F</a>
             </span>
-            <h3 id="current-weather">Sunny</h3>
+            <h3 id="currentWeather">Sunny</h3>
             L:<span id="low">7</span>°C
             <strong>H: <span id="high">19</span>°C</strong>
           </div>
