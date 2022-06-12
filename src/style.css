@@ -130,7 +130,7 @@ a:hover {
   font-size: 70px;
   line-height: 1;
 }
-#currentWeatherDescription {
+#currentWeatherDescription:first-letter {
   text-transform: capitalize;
 }
 
