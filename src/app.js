@@ -39,9 +39,20 @@ function displayTemperature(response) {
   let temperatureElement = document.querySelector("#currentTemperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#currentWeatherDescription");
+  let feelsLikeElement = document.querySelector("#feelsLikeTemp");
+  let humidityElement = document.querySelector("#humidityValue");
+  let windElement = document.querySelector("#windSpeedValue");
+  let maximumElement = document.querySelector("#maximum");
+  let minimumElement = document.querySelector("#minimum");
+
   temperatureElement.innerHTML = `${temperature}`;
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
+  feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  maximumElement.innerHTML = Math.round(response.data.main.temp_max);
+  minimumElement.innerHTML = Math.round(response.data.main.temp_min);
 }
 
 let apiKey = "b6c769756646411c438f6a04abe73a94";
