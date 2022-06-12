@@ -33,16 +33,20 @@ currentDate.innerHTML = `${day} ${date} ${month} ${hours}:${minutes}`;
 
 //show temperature
 
-let apiKey = "b6c769756646411c438f6a04abe73a94";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=reading&appid=${apiKey}&units=metric`;
-
 function displayTemperature(response) {
   console.log(response.data);
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#currentTemperature");
+  let cityElement = document.querySelector("#city");
+  let descriptionElement = document.querySelector("#currentWeatherDescription");
   temperatureElement.innerHTML = `${temperature}`;
+  cityElement.innerHTML = response.data.name;
+  descriptionElement.innerHTML = response.data.weather[0].description;
 }
-console.log(apiUrl);
+
+let apiKey = "b6c769756646411c438f6a04abe73a94";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=reading&appid=${apiKey}&units=metric`;
+
 axios.get(apiUrl).then(displayTemperature);
 
 //change city from search

@@ -130,6 +130,9 @@ a:hover {
   font-size: 70px;
   line-height: 1;
 }
+#currentWeatherDescription {
+  text-transform: capitalize;
+}
 
 #currentLocationButton {
   background-color: #8f73f2;
