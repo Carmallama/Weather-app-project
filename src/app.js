@@ -51,7 +51,7 @@ function displayTemperature(response) {
   let maximumElement = document.querySelector("#maximum");
   let minimumElement = document.querySelector("#minimum");
   let iconElement = document.querySelector("#icon");
-
+  //change weather icon
   temperatureElement.innerHTML = `${temperature}`;
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -83,8 +83,18 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
+search("Reading");
 //get current position
+function searchLocation(position) {
+  let apiKey = "b6c769756646411c438f6a04abe73a94";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
 
+let showCurrentLocation = document.querySelector("#currentLocationButton");
+showCurrentLocation.addEventListener("click", getCurrentLocation);
 //change units of temperature
-
-//change weather icon
