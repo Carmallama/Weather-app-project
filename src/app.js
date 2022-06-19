@@ -37,6 +37,43 @@ let months = [
 let month = months[now.getMonth()];
 currentDate.innerHTML = `${day} ${date} ${month} ${hours}:${minutes}`;
 
+//display forecast
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+      <div class="weather-forecast-date">${day}</div>
+      <img src="https://openweathermap.org/img/wn/01d@2x.png" 
+      alt="" 
+      width="60"
+      />
+        <div class="weather-forecast-temperature">
+          <span class="weather-forecast-temperature-min">16</span> |
+          <span class="weather-forecast-temperature-max">32</span>
+        </div>
+    </div>
+          `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
 //show temperature
 
 function displayTemperature(response) {
